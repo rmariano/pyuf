@@ -1,0 +1,5 @@
+.cache/
+*.egg*
+.sw[op]
+*.pyc
+__pycache__
