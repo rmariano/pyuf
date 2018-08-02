@@ -3,3 +3,5 @@
 .sw[op]
 *.pyc
 __pycache__
+dist/
+build/
