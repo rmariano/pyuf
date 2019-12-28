@@ -3,8 +3,16 @@ python:
   - "3.7"
   - "3.8"
 
-install:  # install dependencies
+install:
   - make install-dev
 
-script:  # run tests
+script:
   - make test
+
+deploy:
+  provider: pypi
+  user: "__token__"
+  password:
+    secure: V/Sf6InIUcPiFx39/tiIiXHBa4Pv8eNeixabI8nkhoFBxnBi4HExi4OpJP1opM7w72fnPpYf8c7Uu9ofGI7y6trSlp5yEDVvMCFeEDDc0ovdrlh6AfFVwzgrtEWN2MW82I84SxNMZMEWI7xpnCB/gJfa+stPAg+NAiSC73YwYo3A77jvYTZs5sggaAkb8yVzpQVGbWa/tfYuyLdhZPXe3gI8/Fsw5n4WEabHG6RcmozthTvrQIm133wdDCJ45DiLTfihWM+fyESMB15FxjnzZzf+Le3zY8kVWyq5lxmfgD2kzJVSxPw2ic6QwWu7munGddp+JGdY6mbsXhPaoiNjW4Yq5OkBV2s/2qeurlEGiek5KxyvDrbgu43qXVCRqrnQa4jxpcWZ2mobrd8xsn7tAGBMZBnB2zdxHV422SdQTSUDECgpElbD0sGDI0krNxc1byZs3LHKonxAYdhZkdEODIh3vUvacfPX12M6aHsv02vp7eZ6HXk4x9aWD4KaP4tFRs+m1p5qPLcyYfQ6isurb6/q0dVpbZ3qCuTrDs58Q9SXPL2dDoDK2TjzJ/h7xU2AyD1adQX200oorp5YHtuuUxOTQNPTHxDEACYG9epPu1lS+y/Bv0juWBuLnWELNuvNmdUbjkDMasBgAmB22ArPUSWyOlXibb8PWpGbnPgsCsI=
+  on:
+    tags: true
