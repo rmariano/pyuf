@@ -5,10 +5,7 @@ from pyuf import Partition, UnionFindSpace
 
 @pytest.fixture
 def space():
-    return UnionFindSpace(
-        Partition("letters", "abcdef"),
-        Partition("numbers", range(5)),
-    )
+    return UnionFindSpace(Partition("letters", "abcdef"), Partition("numbers", range(5)),)
 
 
 def test_find(space):
