@@ -35,3 +35,26 @@ Example usage:
     >>> partition = space.union("letters", "numbers", "alpha")
     >>> partition.name
     alpha
+
+
+Development
+^^^^^^^^^^^
+In order to start working or testing with this repository, you'll need to create and activate a new virtual environment.
+Respectively, the commands are the following ones
+
+.. code:: bash
+
+    $ python3 -m venv env
+    $ source env/bin/activate
+
+After that you can setup the environment with:
+
+.. code:: bash
+
+    $ make install-dev
+    $ make test
+
+Make sure that:
+
+    1. The test pass successfully
+    2. The code is properly formatted (this can be checked with ``make lint`` and corrected with ``make format``).

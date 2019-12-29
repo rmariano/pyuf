@@ -1,6 +1,6 @@
 .cache/
 *.egg*
-.sw[op]
+*.sw[op]
 *.pyc
 __pycache__
 dist/

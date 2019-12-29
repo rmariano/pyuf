@@ -2,7 +2,6 @@
 
 
 class Partition:
-
     def __init__(self, name: str, elements):
         self.name: str = name
         self.elements: set = set(elements)
@@ -18,15 +17,11 @@ class Partition:
 
     def __or__(self, other):
         if self.__class__ is other.__class__:
-            return self.__class__(
-                name=f"{self.name}_{other.name}",
-                elements=self.elements | other.elements
-            )
+            return self.__class__(name=f"{self.name}_{other.name}", elements=self.elements | other.elements)
         return NotImplemented
 
 
 class UnionFindSpace:
-
     def __init__(self, *partitions):
         self._partitions: dict = {p.name: p for p in partitions}
         self._mapping: dict = {e: p.name for p in partitions for e in p}
