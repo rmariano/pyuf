@@ -1,6 +1,7 @@
 .PHONY: lint
 lint:
 	black --check -l 120 src/ tests/
+	mypy src/
 
 .PHONY: format
 format:
@@ -13,6 +14,7 @@ test:
 .PHONY: clean
 clean:
 	find . -type f -name "*.pyc" -delete
+	rm -fr .mypy_cache
 
 .PHONY: build
 build:

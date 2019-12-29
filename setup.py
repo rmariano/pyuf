@@ -14,7 +14,7 @@ setup(
     author_email="marianoanaya@gmail.com",
     packages=find_packages(where="src/"),
     package_dir={"": "src"},
-    extras_require={"dev": ["pytest", "black", "flake8"]},
+    extras_require={"dev": ["pytest", "black", "flake8", "mypy"]},
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
