@@ -37,6 +37,24 @@ class UnionFindSpace:
     def find(self, element: Any) -> Partition:
         return self._element_to_partition[element]
 
+    def _merge(self, bigger_partition: str, smaller_partition: str) -> Partition:
+        """Merge two partitions by moving all the elements from the <smaller_partition> into the <bigger_partition>, and
+        return the latter.
+
+        Because the latter contains more elements, merging this way means less elements to re-label when two partitions
+        are being merged.
+
+        Preconditions:
+            - len(<bigger_partition>) >= len(<smaller_partition>)
+        Side effect:
+            - all elements in <smaller_partition> are re-labelled to point to <bigger_partition_instead>
+
+        Post-conditions:
+            - <bigger_partition> absorbs all elements from <smaller_partition>
+            - <smaller_partition> is deleted
+        """
+
+
     def union(self, partition1_name: str, partition2_name: str, new_name: Optional[str] = None) -> Partition:
         """Merge the two partitions given by their names (first & second parameters, respectively), into a new one."""
 

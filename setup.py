@@ -9,7 +9,7 @@ setup(
     description="Union-Find data structure implementation in Python",
     long_description=long_description,
     author="Mariano Anaya",
-    version="0.1.2",
+    version="0.2.0",
     license="MIT",
     author_email="marianoanaya@gmail.com",
     packages=find_packages(where="src/"),
